@@ -27,9 +27,9 @@ fs.readFile(filePath, 'utf-8', (err, data) => {
 
 		version = xmlDoc.documentElement.getAttribute('version');
 
-		firstDigit = parseInt(version[0]);
-		secondDigit = parseInt(version[2]);
-		thirdDigit = parseInt(version[4]);
+		firstDigit = parseInt(version.split('.')[0]);
+		secondDigit = parseInt(version.split('.')[1]);
+		thirdDigit = parseInt(version.split('.')[2]);
 
 		if (thirdDigit !== 99) {
 			thirdDigit += 1;
